@@ -8,6 +8,9 @@
     <main>
         <div class="top-row px-4">
             <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            @* To test layout state while navigating between pages, I've added following inputs: *@
+            <input type="text" />
+            <input type="text" @bind-value="myValue" />
         </div>
 
         <article class="content px-4">
@@ -15,3 +18,7 @@
         </article>
     </main>
 </div>
+
+@code {
+    string myValue = "hi!";
+}
